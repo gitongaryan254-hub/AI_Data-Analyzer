@@ -1,200 +1,200 @@
 country,rank,visa_free_access
-,,195
-,,192
-,,192
-,,192
-,,192
-,,192
-,,192
-,,192
-,,191
-,,191
-,,191
-,,191
-,,191
-,,191
-,,191
-,,190
-,,190
-,,190
-,,190
-,,190
-,,189
-,,189
-,,188
-,,187
-,,187
-,,187
-,,187
-,,186
-,,185
-,,185
-,,185
-,,185
-,,184
-,,184
-,,184
-,,183
-,,183
-,,182
-,,179
-,,178
-,,177
-,,177
-,,176
-,,172
-,,172
-,,171
-,,171
-,,171
-,,170
-,,166
-,,165
-,,161
-,,159
-,,157
-,,157
-,,157
-,,156
-,,155
-,,153
-,,152
-,,151
-,,150
-,,149
-,,148
-,,148
-,,148
-,,148
-,,145
-,,145
-,,141
-,,141
-,,140
-,,136
-,,135
-,,135
-,,134
-,,133
-,,131
-,,131
-,,129
-,,128
-,,128
-,,128
-,,128
-,,124
-,,124
-,,124
-,,124
-,,123
-,,123
-,,122
-,,122
-,,116
-,,116
-,,107
-,,106
-,,103
-,,99
-,,97
-,,95
-,,94
-,,92
-,,90
-,,90
-,,89
-,,89
-,,88
-,,88
-,,87
-,,86
-,,85
-,,85
-,,82
-,,81
-,,81
-,,80
-,,79
-,,79
-,,79
-,,77
-,,77
-,,76
-,,75
-,,75
-,,74
-,,73
-,,72
-,,71
-,,71
-,,70
-,,70
-,,69
-,,68
-,,68
-,,68
-,,68
-,,67
-,,66
-,,66
-,,65
-,,64
-,,64
-,,64
-,,63
-,,62
-,,62
-,,61
-,,60
-,,60
-,,60
-,,59
-,,59
-,,58
-,,58
-,,58
-,,58
-,,57
-,,57
-,,56
-,,55
-,,55
-,,54
-,,53
-,,53
-,,53
-,,53
-,,53
-,,52
-,,52
-,,51
-,,51
-,,51
-,,50
-,,50
-,,50
-,,50
-,,49
-,,49
-,,46
-,,46
-,,46
-,,45
-,,45
-,,44
-,,44
-,,44
-,,43
-,,42
-,,41
-,,40
-,,40
-,,40
-,,39
-,,35
-,,33
-,,33
-,,31
-,,27
-,,26
+Singapore,1,195
+Finland,2,192
+France,2,192
+Germany,2,192
+Italy,2,192
+Japan,2,192
+South Korea,2,192
+Spain,2,192
+Austria,3,191
+Denmark,3,191
+Ireland,3,191
+Luxembourg,3,191
+Netherlands,3,191
+Norway,3,191
+Sweden,3,191
+Belgium,4,190
+New Zealand,4,190
+Portugal,4,190
+Switzerland,4,190
+United Kingdom,4,190
+Australia,5,189
+Greece,5,189
+Poland,6,188
+Canada,7,187
+Czechia,7,187
+Hungary,7,187
+Malta,7,187
+United States,8,186
+Estonia,9,185
+Lithuania,9,185
+Slovenia,9,185
+United Arab Emirates,9,185
+Iceland,10,184
+Latvia,10,184
+Slovakia,10,184
+Croatia,11,183
+Malaysia,11,183
+Liechtenstein,12,182
+Cyprus,13,179
+Monaco,14,178
+Bulgaria,15,177
+Romania,15,177
+Chile,16,176
+Argentina,17,172
+San Marino,17,172
+Andorra,18,171
+Brazil,18,171
+Hong Kong (SAR China),18,171
+Israel,19,170
+Brunei,20,166
+Barbados,21,165
+Bahamas,22,161
+Mexico,23,159
+St. Kitts and Nevis,24,157
+St. Vincent and the Grenadines,24,157
+Uruguay,24,157
+Seychelles,25,156
+Vatican City,26,155
+Antigua and Barbuda,27,153
+Trinidad and Tobago,28,152
+Costa Rica,29,151
+Mauritius,30,150
+Panama,31,149
+Grenada,32,148
+Paraguay,32,148
+St. Lucia,32,148
+Ukraine,32,148
+Dominica,33,145
+Macao (SAR China),33,145
+Peru,34,141
+Taiwan (Chinese Taipei),34,141
+Serbia,35,140
+El Salvador,36,136
+Colombia,37,135
+Guatemala,37,135
+Solomon Islands,38,134
+Honduras,39,133
+Samoa,40,131
+Tonga,40,131
+Marshall Islands,41,129
+Montenegro,42,128
+Nicaragua,42,128
+North Macedonia,42,128
+Tuvalu,42,128
+Kiribati,43,124
+Micronesia,43,124
+Palau Islands,43,124
+Venezuela,43,124
+Albania,44,123
+Bosnia and Herzegovina,44,123
+Georgia,45,122
+Moldova,45,122
+Russian Federation,46,116
+Türkiye,46,116
+Qatar,47,107
+South Africa,48,106
+Belize,49,103
+Kuwait,50,99
+Timor-Leste,51,97
+Ecuador,52,95
+Maldives,53,94
+Vanuatu,54,92
+Fiji,55,90
+Guyana,55,90
+Jamaica,56,89
+Nauru,56,89
+Botswana,57,88
+Saudi Arabia,57,88
+Bahrain,58,87
+Oman,59,86
+China,60,85
+Papua New Guinea,60,85
+Thailand,61,82
+Belarus,62,81
+Namibia,62,81
+Kosovo,63,80
+Bolivia,64,79
+Lesotho,64,79
+Suriname,64,79
+eSwatini,65,77
+Kazakhstan,65,77
+Indonesia,66,76
+Dominican Republic,67,75
+Malawi,67,75
+Kenya,68,74
+Tanzania,69,73
+Morocco,70,72
+Azerbaijan,71,71
+The Gambia,71,71
+Uganda,72,70
+Zambia,72,70
+Tunisia,73,69
+Armenia,74,68
+Benin,74,68
+Cape Verde Islands,74,68
+Ghana,74,68
+Philippines,75,67
+Rwanda,76,66
+Sierra Leone,76,66
+Zimbabwe,77,65
+Kyrgyzstan,78,64
+Mongolia,78,64
+Mozambique,78,64
+Sao Tome and Principe,79,63
+Cuba,80,62
+Uzbekistan,80,62
+Togo,81,61
+Burkina Faso,82,60
+Gabon,82,60
+Madagascar,82,60
+Cote d'Ivoire,83,59
+Guinea,83,59
+India,84,58
+Mauritania,84,58
+Senegal,84,58
+Tajikistan,84,58
+Equatorial Guinea,85,57
+Niger,85,57
+Algeria,86,56
+Guinea-Bissau,87,55
+Mali,87,55
+Comoro Islands,88,54
+Cambodia,89,53
+Central African Republic,89,53
+Chad,89,53
+Haiti,89,53
+Jordan,89,53
+Bhutan,90,52
+Egypt,90,52
+Angola,91,51
+Liberia,91,51
+Vietnam,91,51
+Burundi,92,50
+Cameroon,92,50
+Congo (Rep.),92,50
+Turkmenistan,92,50
+Djibouti,93,49
+Laos,93,49
+Congo (Dem. Rep.),94,46
+Ethiopia,94,46
+Myanmar,94,46
+Lebanon,95,45
+Nigeria,95,45
+Iran,96,44
+South Sudan,96,44
+Sri Lanka,96,44
+Sudan,97,43
+Eritrea,98,42
+North Korea,99,41
+Bangladesh,100,40
+Libya,100,40
+Palestinian Territory,100,40
+Nepal,101,39
+Somalia,102,35
+Pakistan,103,33
+Yemen,103,33
+Iraq,104,31
+Syria,105,27
+Afghanistan,106,26

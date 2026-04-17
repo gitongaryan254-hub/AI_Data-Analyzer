@@ -4,8 +4,9 @@ import os
 print("🚀 Starting basic profiling (offline mode)...")
 
 # Paths
-input_csv = r"C:\Users\ADMIN\Desktop\AI Data Analyzer\countries_visa_free_access_cleaned.csv"
-output_html = r"C:\Users\ADMIN\Desktop\AI Data Analyzer\countries_visa_free_access_basic_profile.html"
+base_dir = os.path.dirname(os.path.abspath(__file__))
+input_csv = os.path.join(base_dir, "countries_visa_free_access_cleaned.csv")
+output_html = os.path.join(base_dir, "countries_visa_free_access_basic_profile.html")
 
 # Load cleaned CSV
 if not os.path.exists(input_csv):

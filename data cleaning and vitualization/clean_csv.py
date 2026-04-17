@@ -1,12 +1,14 @@
 import pandas as pd
 import numpy as np
 import os
+import re
 
 print("🚀 Starting data cleaning...")
 
 # File paths
-input_csv = r"C:\Users\ADMIN\Desktop\AI Data Analyzer\countries_visa_free_access.csv"
-output_csv = r"C:\Users\ADMIN\Desktop\AI Data Analyzer\countries_visa_free_access_cleaned.csv"
+base_dir = os.path.dirname(os.path.abspath(__file__))
+input_csv = os.path.join(base_dir, "countries_visa_free_access.csv")
+output_csv = os.path.join(base_dir, "countries_visa_free_access_cleaned.csv")
 
 # 1️⃣ Load CSV
 print("📖 Loading CSV file...")
@@ -56,8 +58,22 @@ print(f"✅ Removed {before - after} duplicate rows")
 # 6️⃣ Convert numeric columns (correct for pandas 3)
 print("🔢 Converting numeric columns...")
 
-for col in df.columns:
-    df[col] = pd.to_numeric(df[col], errors="coerce")
+# Keep country names as text and parse rank safely from ordinal text like "1st"
+if "rank" in df.columns:
+    df["rank"] = (
+        df["rank"]
+        .astype(str)
+        .str.extract(r"(\d+)", expand=False)
+        .pipe(pd.to_numeric, errors="coerce")
+    )
+
+if "visa_free_access" in df.columns:
+    df["visa_free_access"] = pd.to_numeric(df["visa_free_access"], errors="coerce")
+
+# Drop rows where required fields are missing
+required_cols = [c for c in ["country", "rank", "visa_free_access"] if c in df.columns]
+if required_cols:
+    df = df.dropna(subset=required_cols)
 
 # 7️⃣ Save cleaned CSV
 df.to_csv(output_csv, index=False)

@@ -1,6 +1,9 @@
 import streamlit as st
 import pandas as pd
 from sklearn.tree import DecisionTreeRegressor
+from sklearn.metrics import mean_squared_error
+from sklearn.model_selection import train_test_split
+import os
 import re
 
 # ============================================================================
@@ -21,7 +24,8 @@ st.markdown("Predict passport rank based on visa-free access count")
 def load_and_train_model():
     """Load data and train the DecisionTreeRegressor model"""
     # Load the raw dataset (has the rank data we need)
-    df = pd.read_csv('countries_visa_free_access.csv')
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    df = pd.read_csv(os.path.join(base_dir, 'countries_visa_free_access.csv'))
     
     # Extract numeric rank from ordinal strings (e.g., "1st" -> 1, "2nd" -> 2)
     def extract_rank_number(rank_str):
@@ -37,11 +41,18 @@ def load_and_train_model():
     # Train the model
     model = DecisionTreeRegressor(random_state=42)
     model.fit(X, y)
+
+    # Compute MSE on a holdout set for quick model quality feedback
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    eval_model = DecisionTreeRegressor(random_state=42)
+    eval_model.fit(X_train, y_train)
+    y_pred = eval_model.predict(X_test)
+    mse = mean_squared_error(y_test, y_pred)
     
-    return model, df
+    return model, df, mse
 
 # Load model and data
-model, df = load_and_train_model()
+model, df, mse_value = load_and_train_model()
 
 # ============================================================================
 # HELPER FUNCTIONS
@@ -173,3 +184,4 @@ with st.expander("📊 Dataset Information"):
     st.write(f"Total countries: {len(df)}")
     st.write(f"Visa-free access range: {df['Visa-Free Access'].min()} - {df['Visa-Free Access'].max()}")
     st.write(f"Rank range: 1 to {int(df['Rank_Numeric'].max())}")
+    st.write(f"Model Mean Squared Error (MSE): {mse_value:.4f}")

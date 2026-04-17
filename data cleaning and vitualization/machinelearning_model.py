@@ -3,18 +3,25 @@ from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.metrics import mean_squared_error
 import warnings
+import argparse
+import os
 
 # Suppress scikit-learn warnings for cleaner output
 warnings.filterwarnings('ignore', category=UserWarning)
+
+parser = argparse.ArgumentParser(description="Passport rank predictor and MSE evaluator")
+parser.add_argument("--mse-only", action="store_true", help="Print only Mean Squared Error and exit")
+args = parser.parse_args()
 
 # ============================================================================
 # 1. Load the CSV files
 # ============================================================================
 # Load the raw dataset
-df_raw = pd.read_csv('countries_visa_free_access.csv')
+base_dir = os.path.dirname(os.path.abspath(__file__))
+df_raw = pd.read_csv(os.path.join(base_dir, 'countries_visa_free_access.csv'))
 
 # Load the cleaned dataset
-df_cleaned = pd.read_csv('countries_visa_free_access_cleaned.csv')
+df_cleaned = pd.read_csv(os.path.join(base_dir, 'countries_visa_free_access_cleaned.csv'))
 
 print("Raw dataset shape:", df_raw.shape)
 print("Cleaned dataset shape:", df_cleaned.shape)
@@ -66,6 +73,10 @@ y_pred = model.predict(X_test)
 # Calculate Mean Squared Error
 mse = mean_squared_error(y_test, y_pred)
 print(f"Mean Squared Error (MSE) on test set: {mse:.4f}")
+
+if args.mse_only:
+    print(f"MSE={mse:.4f}")
+    raise SystemExit(0)
 
 # ============================================================================
 # 6. Interactive CLI prediction loop
