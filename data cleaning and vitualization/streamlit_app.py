@@ -5,6 +5,18 @@ from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import train_test_split
 import os
 import re
+import socket
+
+def _get_local_ip():
+    """Detect the machine's LAN IP address automatically."""
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.connect(("8.8.8.8", 80))
+        ip = s.getsockname()[0]
+        s.close()
+        return ip
+    except Exception:
+        return "localhost"
 
 # ============================================================================
 # PAGE CONFIGURATION
@@ -16,6 +28,9 @@ st.set_page_config(page_title="Passport Rank Predictor", layout="centered")
 # ============================================================================
 st.title("🛂 Passport Rank Predictor")
 st.markdown("Predict passport rank based on visa-free access count")
+
+_local_ip = _get_local_ip()
+st.info(f"🌐 App accessible at: http://localhost:8501  |  http://{_local_ip}:8501")
 
 # ============================================================================
 # LOAD DATA AND TRAIN MODEL (cached for performance)

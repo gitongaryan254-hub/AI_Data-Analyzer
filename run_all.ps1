@@ -1,5 +1,4 @@
 param(
-    [switch]$SkipStreamlit,
     [switch]$MseOnly,
     [switch]$SkipMlCli
 )
@@ -50,14 +49,7 @@ try {
     & $pythonExe "machinelearning_model.py" --mse-only
     if ($LASTEXITCODE -ne 0) { throw "MSE step failed." }
 
-    if (-not $SkipStreamlit) {
-        Write-Host "Starting Streamlit in a new terminal window on http://localhost:8501 ..."
-        $streamlitCommand = "Set-Location `"$projectRoot`"; & `"$pythonExe`" -m streamlit run `"data cleaning and vitualization\streamlit_app.py`""
-        Start-Process powershell -ArgumentList "-NoExit", "-ExecutionPolicy", "Bypass", "-Command", $streamlitCommand | Out-Null
-        Write-Host "Streamlit launched."
-    }
-
-    if ((-not $SkipMlCli) -and (-not $SkipStreamlit)) {
+    if (-not $SkipMlCli) {
         Write-Host "Starting terminal ML predictor interface..."
         & $pythonExe "machinelearning_model.py"
         exit $LASTEXITCODE
